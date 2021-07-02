@@ -39,7 +39,8 @@ export default function Update(props) {
     useEffect(() => {
         axios.get(`https://backend-project0904.herokuapp.com/api/profiles/${id}`)
             .then(res => {
-            setFormData(res.data)
+                setFormData(res.data)
+                console.log(formData.DateOfBirth)
             })
         .catch(err => console.log(err))
         
@@ -116,7 +117,7 @@ export default function Update(props) {
                     <FormGroup>
             <Label for="DateOfBirth">D.O.B</Label>
                         <Input type="date" name="DateOfBirth" id="DateOfBirth" placeholder="Date Of Birth"
-                        value={formData.DateOfBirth}
+                            value= {formData.DateOfBirth}
                             onChange={e => handleChange(e)}
                         />
         </FormGroup>
