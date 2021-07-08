@@ -3,7 +3,8 @@ import React,{useEffect, useState} from 'react'
 import { GenericProfileContainer } from '../containers/GenericProfileContainer'
 import styled from 'styled-components'
 import { useHistory } from 'react-router-dom'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import '../styles/button.css'
 const Container = styled.section`
 width : 80vw;
 height : 80vh;
@@ -27,19 +28,17 @@ export default function Home() {
         .catch(err => console.log(err.message))
     }, [data])
     return (
-        <>
-            <Link to="/create-profile">
-                <Button>New Profile</Button><Button>New Profile</Button>
-            </Link>
-        
+      <>
+            <button className="btn-customer-service">
+                <img src = "/Images/vector.svg" alt = "Telephone icon" />
+          <a href="tel:555-555-4678" id = "telephone">Grahak Seva</a>
+        </button>
+
         <Container>
-{           
-        data.map((item,index) => {
-            return <GenericProfileContainer item={item} key={index}/>
-        })
-    }
-            </Container>
-            </>
-        
-    )
+          {data.map((item, index) => {
+            return <GenericProfileContainer item={item} key={index} />;
+          })}
+        </Container>
+      </>
+    );
 }

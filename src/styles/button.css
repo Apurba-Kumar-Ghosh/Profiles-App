@@ -1,0 +1,20 @@
+.btn-customer-service{
+    margin : 2rem;
+    border : none;
+    background: #1BA398;
+    border-radius: 43px;
+    display : flex;
+    justify-content : space-evenly;
+    align-items : center;
+    height : 36px;
+    width : 150px;
+}
+#telephone{
+    text-decoration: none;
+    color : white;
+    font-family: Mukta;
+    font-style: normal; 
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+}
